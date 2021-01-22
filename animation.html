@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Animation</title>
+<style>
+body{
+     display: flex;  
+     height: 100%;
+     padding: 0;
+     margin: 0;
+    background-color:#050210;
+    align-items: center;
+    justify-content: center;
+    display: flex;  
+   
+}
+
+.circle{
+
+     border-radius: 50%;
+   border:  #050210;
+   position: relative;
+    
+     
+}
+#circle1{
+    width: 800px;
+      height: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+      background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+} 
+
+#circle2{
+  width: 90%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: #050210;
+    animation-name: myanimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+      }
+
+      @keyframes myanimation{
+0%{
+  background-color:#4c495a;}
+  /*25%{background-color:#484163;}*/
+ /* 50% {background-color:#130f20;}
+  75% {background-color:#130c2b;}*/
+  100%{background-color:#050210;}
+
+}
+  
+   #circle3{
+     position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-name: cicrlesize;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  background-color: #050210;
+  ;
+  }
+  @keyframes cicrlesize{
+    from{width: 0%;}
+   to{ width: 100%;}
+   from{height: 0%;}
+   to{height: 100%;}
+  }
+  
+ 
+
+
+    
+
+
+
+
+  
+   
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+   
+<div class="circle" id="circle1">
+<div class="circle" id="circle2">
+<div class="circle" id="circle3"></div>
+  
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>
