@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Animation</title>
+<style>
+body{
+     display: flex;  
+     height:960px;
+     padding: 0;
+     margin: 0;
+    background-color:#050210;
+    align-items: center;
+    justify-content: center;
+   }
+
+
+
+
+
+              
+#circle1{
+    width: 500px;
+      height: 500px;
+    position: relative;
+     border-radius: 50%;
+      background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+      animation: rotationanimation 1s linear infinite
+   } 
+
+
+@keyframes rotationanimation {
+0% {
+  transform: rotate(0deg);
+}
+100%{
+  transform: rotate(360deg);
+}
+}
+#circle1::after{
+  content: '';
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  background-color: #050210;
+  border-radius: 50%;
+}
+
+  
+   #circle3{
+     content: '';
+     position: absolute;
+     border-radius: 50%;
+
+    width: 400px;
+    height: 400px;
+    animation-name: cicrlesize;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  background-color: #140f27; }
+  
+  
+  @keyframes cicrlesize {
+               from {
+                   width: 0;
+               }
+               to {
+                   width:400px ;
+               }
+               from {
+                   height: 0;
+
+               }
+               to {
+                   height: 400px;
+               }
+             
+           }
+
+
+
+
+
+
+  
+   
+#circle1 span{
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+}
+
+#circle1 span:nth-child(1)
+{
+  filter: blur(5px);
+}
+#circle1 span:nth-child(2)
+{
+  filter: blur(10px);
+}
+#circle1 span:nth-child(1)
+{
+  filter: blur(20px);
+}
+#circle1 span:nth-child(1)
+{
+  filter: blur(55px);
+}
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+<div class="circle" id="circle1">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+
+
+
+</div>
+<div  id="circle3"></div>
+
+</body>
+</html>
